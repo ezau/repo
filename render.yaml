@@ -2,7 +2,7 @@ services:
   - type: web
     name: backend-django
     env: python
-    buildCommand: pip install -r backend/requirements.txt   # Ajusta la ruta
+    buildCommand: pip install -r backend/backend/requirements.txt   # Ajusta la ruta
     startCommand: gunicorn backend.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
